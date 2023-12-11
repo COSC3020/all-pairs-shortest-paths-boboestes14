@@ -24,14 +24,14 @@ function allPairsShortestPaths(graph) {
     return dist;
 }
 
-function make2d(a){
-    arr = []
-    arr2 = []
-    for(j = 0; j < a; j++){
-        arr2.push(500)
+function make2d(a) {
+    let arr = [];
+    for (let i = 0; i < a; i++) {
+        let arr2 = [];
+        for (let j = 0; j < a; j++) {
+            arr2.push(Infinity);
+        }
+        arr.push(arr2);
     }
-    for(i = 0; i < a; i++){
-        arr.push(arr2)
-    }
-    return JSON.parse(JSON.stringify(arr))
+    return arr;
 }
